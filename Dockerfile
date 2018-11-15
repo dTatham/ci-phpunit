@@ -5,3 +5,5 @@ RUN \
 	docker-php-ext-configure zip --with-libzip && \
 	docker-php-ext-install -j$(nproc) zip && \
 	docker-php-ext-enable sodium
+
+ENV OMPOSER_ALLOW_SUPERUSER=1 COMPOSER_DISABLE_XDEBUG_WARN: 1
